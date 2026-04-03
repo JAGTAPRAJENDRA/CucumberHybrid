@@ -1,4 +1,4 @@
-feature:vefy that the dashboard page is accessible and displays correctly
+Feature:vefy that the dashboard page is accessible and displays correctly
 @smoke
 Scenario: Verify that the dashboard page is accessible and displays correctly
 Given user is logged in and on the dashboard page
