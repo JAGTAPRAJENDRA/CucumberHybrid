@@ -38,6 +38,7 @@ public class LoginPage {
 	public void enterpassword(String passwordtext) {
 		
 		elementutils.typeTextIntoElement(passwordFiled, passwordtext, 15);
+		System.out.println("password entered");
 	}
 	
 	public AccountPage clickLoginButton() {

@@ -15,7 +15,8 @@ WebDriver driver;
 	}
 	
 	@FindBy(xpath="//h2[text()='My Account']")
-	private WebElement MyAccountText;
+	private WebElement MyAccountText;//
+	
 	
 	public boolean displaystatusofmyaccount() {
 		return MyAccountText.isDisplayed();
