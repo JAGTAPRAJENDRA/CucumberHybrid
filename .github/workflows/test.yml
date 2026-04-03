@@ -3,25 +3,24 @@ name: Run Cucumber Tests
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v3
+      - uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Install Maven
+        run: sudo apt-get install maven -y
+
       - name: Run Tests
-        working-directory: CucumberHybrid/CucumberHybrid
+        working-directory: CucumberHybrid   # ✅ FIXED
         run: mvn clean test
 
       - name: Upload Report
@@ -29,4 +28,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Cucumber-Report
-          path: CucumberHybrid/CucumberHybrid/target/
+          path: CucumberHybrid/target/
