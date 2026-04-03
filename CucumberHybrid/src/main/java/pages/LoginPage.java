@@ -49,5 +49,9 @@ public class LoginPage {
 	public String getwarningmessagetext() {
 		return warningmessage.getText();
 	}
+	
+	public String getwarningmessagetext(String expectedmessage) {
+		return warningmessage.getText();//
 
+}
 }
