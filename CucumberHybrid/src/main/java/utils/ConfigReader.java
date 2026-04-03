@@ -8,14 +8,14 @@ public class ConfigReader {
 
 	public Properties intializeproperties() {
 
-		Properties prop = new Properties();
+		Properties prop = new Properties();//
 		File propfile = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\config\\config.properties");
 
 		try {
 			FileInputStream fis = new FileInputStream(propfile);
-			prop.load(fis);
+			prop.load(fis);//
 		} catch (Throwable e) {
-			e.printStackTrace();
+			e.printStackTrace();//
 		}
 		return prop;
 	}
