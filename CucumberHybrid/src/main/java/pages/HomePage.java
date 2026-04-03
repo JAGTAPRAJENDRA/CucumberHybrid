@@ -32,6 +32,9 @@ public class HomePage {
 	
 	@FindBy(xpath="//button[@class='btn btn-default btn-lg']")
 	private WebElement searchbutton;
+	@FindBy(xpath="//button[@class='btn btn-default btn-lg']")
+	private WebElement searchbutton1;
+	
 	
 	
 	public void clickOnMyAccount() {
